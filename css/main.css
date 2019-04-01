@@ -106,6 +106,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     color: #e2e3ed;
+    text-align: left;
    }
 
 ul,
@@ -129,6 +130,7 @@ h4 {
      font-family: 'Poppins', sans-serif;
      font-size: 1.125em;
      font-weight: 500;
+     margin: 20px 0;
    }
 
 p {
@@ -137,11 +139,11 @@ p {
    }
 
 img {
-
+    width: 100%;
    }
 
 figure {
-
+    margin: 0;
    }
 
 address {
@@ -153,6 +155,8 @@ address {
   width: 90%;
   margin: 50px 0;
 }
+
+
 
 /*---- Base header / footer styles ---*/
 header,
@@ -204,6 +208,22 @@ header nav ul li {
   font-size: 1.125em;
 }
 
+header figure {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
 footer {
   text-align: center;
   flex-direction: column;
@@ -244,6 +264,10 @@ footer .copyright {
 
 /* Hero area */
 .hero-area {
+  background: url(../img/hero-image.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -256,16 +280,17 @@ footer .copyright {
 
 /* Aside */
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #527158;
 }
 
  aside .form {
    margin-top: 30px;
  }
+
 
  input[type=text] {
    box-sizing: border-box;
@@ -291,9 +316,16 @@ aside {
 
 /* Features */
 .features {
+  background: url('../img/features-image.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+.features h2 {
+  margin-bottom: 60px;
 }
 
 .features h2 {
@@ -486,47 +518,68 @@ About Page
 
 @media only screen and (min-width: 768px) {
    /*-- Tablet styles here --*/
+
+
   .content-wrapper {
   max-width: 640px;
   margin: 100px 0;
   }
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+    }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    }
+
+  /*-- Header --*/
   header {
-    justify-content: center;
-      }
+    justify-content: space-around;
+  }
 
   header .content-wrapper {
-      width: 83%;
-      justify-content: space-between;
-      }
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header figure {
+    width: 30%;
+  }
 
   header nav {
-          width: 140px;
-      }
+    width: 20%;
+  }
 
   header nav ul {
-      justify-content: space-between;
-      }
+    justify-content: space-between;
+  }
 
   .header-divider {
-          display: none;
-      }
+    display: none;
+  }
 
       /*-- Hero Area --*/
-
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+    }
       /*-- Aside --*/
   aside .content-wrapper {
-          margin: 50px 0;
-          display: flex;
-          justify-content: center;
-          flex-flow: row wrap;
+      margin: 50px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
       }
 
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-          width: 300px;
-          margin: 0;
+      width: 35%;
+      margin: 0;
       }
-
       /*-- Features --*/
 
   .features article {
@@ -534,41 +587,62 @@ About Page
       justify-content: center;
       align-items: center;
       flex-flow: row wrap;
-      flex-basis: 320px;
+      flex-basis: 50%;
       }
 
   .features .features-item-description {
-      width: 190px;
+      width: 50%;
       }
 
       /*-- Reviews --*/
   .reviews article {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       }
 
+  .reviews article figure,
   .reviews article div {
-      width: 470px;
+      width: 49%;
+      }
+
+  .reviews h3 {
+      width: 75%;
+      margin: 0;
       }
 
       /*-- Footer --*/
   footer .content-wrapper {
-      width: 640px;
+      width: 65%;
       margin: 100px 0;
       }
 
-  .footer-content {
+  footer .footer-content {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+      flex-direction: row;
       }
 
       footer .contact {
           margin-bottom: 0;
       }
 
-      footer .copyright {
-          width: 250px;
+
+  footer h4 {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+      }
+
+  footer p {
+      line-height: 1.285;
+      }
+
+  footer .copyright {
+      width: 100%;
+      }
+
+  footer .copyright {
+      width: 250px;
       }
 
 
@@ -587,37 +661,61 @@ About Page
       width: 100%;
     }
 
+    .faq h4,
+    .faq p {
+        font-size: .875em;
+        line-height: 1.125;
+    }
+
 
     /* ^__^ About page ^__^ */
 
     .mission-content {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .mission-content p {
-          width: 300px;
+          width: 40%;
       }
 
-      .contact-section, .content-wrapper h2 {
+      .contact-section .content-wrapper h2 {
           width: 80%;
       }
 
+      .contact-content h4 {
+        font-size: 1.5em;
+      }
+
       .contact-content {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-  }
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
 
 
 }
 
 @media only screen and (min-width: 1200px) {
      /*Desktop styles here*/
-         .content-wrapper {
-              max-width: 960px;
-         }
+     .content-wrapper {
+       max-width: 960px;
+     }
+
+     h2 {
+       font-size: 2.25em;
+     }
+
+     h3,
+     h4 {
+         font-size: 1.875em;
+     }
+
+     p {
+         font-size: 1.125em;
+         line-height: 1.333;
+     }
 
           /* Hero */
          .hero-area h1 {
@@ -625,14 +723,20 @@ About Page
          }
 
          /* Aside */
+
          aside .content-wrapper {
-             justify-content: space-around;
+           justify-content: space-around;
          }
 
          aside .content-wrapper .form-description,
          aside .content-wrapper .form {
-             width: 480px;
+           width: 30%;
          }
+
+         .form-description p {
+           font-size: 1.125em;
+         }
+
 
          /* Features */
          .features h2 {
