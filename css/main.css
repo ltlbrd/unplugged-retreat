@@ -613,17 +613,26 @@ About Page
       }
       /*-- Features --*/
 
-  .features article {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: row wrap;
-      flex-basis: 50%;
+    .features h2 {
+        margin: 0 20px 20px 0;
+      }
+
+    .features article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        flex-basis: 50%;
       }
 
   .features .features-item-description {
-      width: 50%;
+        width: 50%;
       }
+
+  .features i {
+        margin-bottom: 30px;
+      }
+
 
       /*-- Reviews --*/
   .reviews article {
@@ -642,6 +651,7 @@ About Page
       }
 
       /*-- Footer --*/
+
   footer .content-wrapper {
       width: 65%;
       margin: 100px 0;
@@ -655,7 +665,7 @@ About Page
       }
 
       footer .contact {
-          margin-bottom: 0;
+      margin-bottom: 0;
       }
 
 
@@ -668,14 +678,14 @@ About Page
       line-height: 1.285;
       }
 
+  footer .social-icons {
+      width: 12.5em;
+      justify-content: space-between;
+      }
+
   footer .copyright {
       width: 100%;
       }
-
-  footer .copyright {
-      width: 250px;
-      }
-
 
 
       /* ^__^ FAQ page ^__^ */
@@ -778,12 +788,12 @@ About Page
          }
 
          .features article {
-             flex-basis: 320px;
+             flex-basis: 33%;
          }
 
          /* Reviews */
          .reviews article div {
-             width: 475px;
+             width: 42%;
          }
 
      /* ^__^ About Page ^__^ */
